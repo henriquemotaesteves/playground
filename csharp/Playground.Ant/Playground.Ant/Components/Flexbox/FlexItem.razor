@@ -1,0 +1,13 @@
+<div class="@Classes">
+    @ChildContent
+</div>
+
+@code {
+    private string Classes => string.Join(" ", "flex-item", $"flex-item--grow-{this.Grow}");
+
+    [Parameter]
+    public int Grow { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

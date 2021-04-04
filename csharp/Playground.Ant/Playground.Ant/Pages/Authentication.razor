@@ -1,0 +1,37 @@
+﻿@page "/"
+
+<FlexContainer JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center">
+    <FlexItem>
+        <div class="authentication-page__form">
+            <Form Layout="@FormLayout.Vertical" Model="@model">
+                <FormItem Label="Username">
+                    <Input @bind-Value="@context.Username" AutoFocus />
+                </FormItem>
+                <FormItem Label="Password">
+                    <InputPassword @bind-Value="@context.Password" />
+                </FormItem>
+                <FormItem>
+                    <FlexContainer JustifyContent="JustifyContent.End" AlignItems="AlignItems.Center">
+                        <FlexItem>
+                            <div class="authentication-page__form__button">
+                                <Button Type="@ButtonType.Primary" Block>Sign In</Button>
+                            </div>
+                        </FlexItem>
+                    </FlexContainer>
+                </FormItem>
+            </Form>
+        </div>
+    </FlexItem>
+</FlexContainer>
+
+@code {
+
+    private class UserModel
+    {
+        public string Username { get; set; }
+        
+        public string Password { get; set; }
+    }
+
+    private readonly UserModel model = new();
+}

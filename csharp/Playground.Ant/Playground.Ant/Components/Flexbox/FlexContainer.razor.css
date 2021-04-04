@@ -1,0 +1,36 @@
+﻿.flex-container {
+    display: flex;
+}
+
+.flex-container--fill {
+    height: 100%;
+    width:  100%;
+}
+
+.flex-container--justify-content--start {
+    justify-content: flex-start;
+}
+
+.flex-container--justify-content--center {
+    justify-content: center;
+}
+
+.flex-container--justify-content--end {
+    justify-content: flex-end;
+}
+
+.flex-container--align-items--stretch {
+    align-items: stretch;
+}
+
+.flex-container--align-items--center {
+    align-items: center;
+}
+
+.flex-container--direction--row {
+    flex-direction: row;
+}
+
+.flex-container--direction--column {
+    flex-direction: column;
+}

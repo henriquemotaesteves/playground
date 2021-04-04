@@ -1,0 +1,25 @@
+﻿<div class="@Classes">
+    @ChildContent
+</div>
+
+@code {
+    private string Classes => string.Join(
+        " ",
+        "flex-container",
+        "flex-container--fill",
+        this.Direction.Class,
+        this.JustifyContent.Class,
+        this.AlignItems.Class);
+
+    [Parameter]
+    public Direction Direction { get; set; } = Direction.Row;
+
+    [Parameter]
+    public JustifyContent JustifyContent { get; set; } = JustifyContent.Start;
+
+    [Parameter]
+    public AlignItems AlignItems { get; set; } = AlignItems.Stretch;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
